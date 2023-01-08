@@ -24,6 +24,11 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -38,6 +43,7 @@ h1 {
   font-size: 45px;
   line-height: 50px;
   color: #717171;
+  margin: 0;
 }
 
 h2 {
@@ -46,6 +52,7 @@ h2 {
   font-size: 40px;
   line-height: 52px;
   color: #499a18;
+  margin: 0;
 }
 
 .green-text {
@@ -65,15 +72,39 @@ h2 {
   color: black;
   border: 2px solid #e06733;
   border-radius: 10px;
-  padding: 14px 27px;
+  /* padding: 14px 27px; */
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
   cursor: pointer;
   background-color: inherit;
+  width: 158px;
+  height: 44px;
+
+  transition: all 0.5s;
 }
 
+.button2 {
+  font-family: Inika;
+  font-size: 20px;
+  font-weight: 400;
+  /* font-stretch:normal; */
+
+  color: #e06733;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  /* padding: 12px 54px; */
+  width: 161px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: inherit;
+  margin: 69px 38px 0 0;
+  display: block;
+  transition: all 0.5s;
+}
 
 .button3 {
   font-family: Inika;
@@ -82,13 +113,15 @@ h2 {
 
   color: #e06733;
   border: 1px solid #e06733;
-  border-radius: 10px;
-  padding: 12px 34px 12px 30px;
+  border-radius: 5px;
+  /* padding: 12px 34px 12px 30px; */
   text-align: center;
   text-decoration: none;
-  margin-bottom: 38px;
   cursor: pointer;
   background-color: inherit;
+  width: 162px;
+  height: 50px;
+  transition: all 0.5s;
   /* display: inline-block; */
 }
 
@@ -96,7 +129,6 @@ h2 {
   background-color: #e06733;
   color: white;
 }
-
 
 /* Header start */
 
@@ -107,9 +139,6 @@ h2 {
   justify-content: space-between;
   height: 134px;
   font-family: "Inika";
-}
-
-.nav {
 }
 
 .header_logo {
@@ -125,9 +154,6 @@ h2 {
   line-height: 20px;
 }
 
-.header_logo-pic {
-}
-
 .nav-list {
   display: flex;
   flex-wrap: wrap;
@@ -135,6 +161,7 @@ h2 {
 }
 
 .nav-item {
+  /* margin-left: 1px; */
   margin-right: 46px;
 }
 
@@ -145,11 +172,10 @@ h2 {
 .nav-link {
   text-decoration: none;
   color: #010201;
-  transition: color 0.5s;
-  font-size: 16px;
+  transition: all 0.5s;
 
+  font-size: 16px;
   line-height: 20px;
-  transition: 0.3s;
 }
 
 .nav-link:hover {
@@ -160,9 +186,6 @@ h2 {
 /* Header end */
 
 /* Main start */
-
-.main {
-}
 
 .section {
   margin: 0;
@@ -192,13 +215,14 @@ h2 {
 }
 
 .welcome-block {
-  width: 550px;
+  width: 548px;
 }
 
 .welcome-block > p {
   margin-top: 42px;
   margin-bottom: 48px;
   display: block;
+  line-height: 35px;
 }
 
 /* Section #1 Welcome end */
@@ -214,15 +238,18 @@ h2 {
 }
 
 .about-block {
+  margin: top 10px;
   width: 605px;
 }
 
 .about-block > h2 {
+  margin-top: 26px;
   width: 463px;
 }
 
 .about-block > p {
   margin-top: 40px;
+  line-height: 30px;
 }
 
 .about-pic {
@@ -238,7 +265,7 @@ h2 {
 }
 .service_block {
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: center;
@@ -246,30 +273,9 @@ h2 {
 
 .service h2 {
   width: 306px;
-  margin: 40px 142px 90px 0;
-}
-
-.button2 {
-  font-family: Inika;
-  font-size: 20px;
-  font-weight: 400;
-  /* font-stretch:normal; */
-
-  color: #e06733;
-  border: 1px solid #e06733;
-  border-radius: 10px;
-  padding: 12px 54px;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: inherit;
-  margin: 69px 38px 0 0;
-  display: block;
-}
-
-.button2:hover {
-  background-color: #e06733;
-  color: white;
+  margin-top: 40px;
+  margin-right: 142px;
+  margin-bottom: 80px;
 }
 
 .cards_block {
@@ -281,8 +287,48 @@ h2 {
 }
 
 .card {
-border: solid 1px orangered;
+  /* width:330px; */
+  /* border: 1px solid #E3E1D5;
+  border-radius: 20px; */
+  margin: 0;
 }
+
+.card > figcaption {
+  margin-top: 0;
+  height: 100px;
+  border: 1px solid #e3e1d5;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.card-pic {
+  display: block;
+}
+
+.card_category {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #e06733;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #717171;
+}
+
+/* .card2 {
+border: solid 1px orangered;
+} */
 
 /* Section #3 Service end */
 /* Section #4 Prices start */
@@ -295,16 +341,22 @@ border: solid 1px orangered;
   height: 560px;
 }
 
-.prices h2,
-.prices p {
+.prices h2 {
   font-family: "Inter";
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
   color: black;
+  margin-top: 38px;
 }
 
 .prices p {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 38px;
+  color: black;
   text-align: right;
 }
 
@@ -316,7 +368,10 @@ border: solid 1px orangered;
 }
 
 .prices-pic {
-  width: 152px;
+  display: block;
+  width: 168px;
+  margin-top: 35px;
+  margin-right: -10px;
 }
 
 .prices_plans {
@@ -332,12 +387,27 @@ border: solid 1px orangered;
   flex-direction: column;
   justify-content: space-between;
 }
-.price_items {
+.price_item {
   width: 250px;
   height: 50px;
-
   background: #edf2ec;
   border-radius: 20px;
+
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price_item p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0;
 }
 
 /* Section #4 Prices end */
@@ -349,8 +419,8 @@ border: solid 1px orangered;
 }
 
 .contacts-pic {
-  position:absolute;
-  bottom:0;
+  position: absolute;
+  bottom: 0;
 }
 
 .contacts h2 {
@@ -359,11 +429,12 @@ border: solid 1px orangered;
   font-size: 40px;
   line-height: 52px;
   padding-top: 60px;
-  text-align:center;
+  text-align: center;
+  margin: 0;
 }
 
 .accordion {
-  position:absolute;
+  position: absolute;
   top: 148px;
   right: 109px;
   width: 450px;
@@ -422,6 +493,8 @@ border: solid 1px orangered;
 .social-list {
   display: flex;
   justify-content: flex-end;
+  /*   align-content: center;
+  align-items: center; */
   list-style: none;
 }
 
@@ -432,13 +505,5 @@ border: solid 1px orangered;
 .social-list li:last-child {
   margin-right: 0;
 }
-
-
-/* .social {
-}
-
-.social ul {
-} */
-
 
 /* Foooter end */
