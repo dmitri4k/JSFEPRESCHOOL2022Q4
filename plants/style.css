@@ -30,6 +30,8 @@ html {
   padding: 0 109px;
 }
 
+/* Headers and text styles start */
+
 h1 {
   font-family: "Inter";
   font-weight: 700;
@@ -46,28 +48,6 @@ h2 {
   color: #499a18;
 }
 
-.prices h2, .prices p {
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  color: black;
-}
-
-.prices p {
-  text-align: right;
-  /* margin:0; */
-}
-
-.contacts h2 {
-  font-family: "Inika";
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  margin-top: 60px;
-  /* text-align: center */
-}
-
 .green-text {
   color: #499a18;
 }
@@ -76,6 +56,48 @@ h2 {
   color: #e06733;
 }
 
+/* Headers and text styles end */
+
+.button {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  border: 2px solid #e06733;
+  border-radius: 10px;
+  padding: 14px 27px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+
+.button3 {
+  font-family: Inika;
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #e06733;
+  border: 1px solid #e06733;
+  border-radius: 10px;
+  padding: 12px 34px 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 38px;
+  cursor: pointer;
+  background-color: inherit;
+  /* display: inline-block; */
+}
+
+:where(.button, .button2, .button3):hover {
+  background-color: #e06733;
+  color: white;
+}
+
+
 /* Header start */
 
 .header_wrapper {
@@ -83,7 +105,6 @@ h2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  /* background-color: #edf2ec; */
   height: 134px;
   font-family: "Inika";
 }
@@ -141,19 +162,20 @@ h2 {
 /* Main start */
 
 .main {
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 
 .section {
   margin: 0;
 }
 
-
-
-.header, .welcome, .service, .contacts {
+.header,
+.welcome,
+.service,
+.contacts {
   background-color: #edf2ec;
 }
+
+/* Section #1 Welcome start */
 
 .welcome > .wrapper {
   display: flex;
@@ -171,7 +193,6 @@ h2 {
 
 .welcome-block {
   width: 550px;
-  /* margin-left: 224px; */
 }
 
 .welcome-block > p {
@@ -179,6 +200,11 @@ h2 {
   margin-bottom: 48px;
   display: block;
 }
+
+/* Section #1 Welcome end */
+
+/* Section #2 About start */
+
 .about > .wrapper {
   display: flex;
   flex-direction: row;
@@ -199,31 +225,35 @@ h2 {
   margin-top: 40px;
 }
 
-.about-pic{
+.about-pic {
   width: 464px;
 }
 
-.button {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  border: 2px solid #e06733;
-  border-radius: 10px;
-  padding: 14px 27px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  /* margin: 0 auto; */
-  display: inline-block;
-  cursor: pointer;
-  background-color:inherit;
+/* Section #2 About end */
+
+/* Section #3 Service start */
+
+.service > .wrapper {
+  height: 1300px;
+}
+.service_block {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.service h2 {
+  width: 306px;
+  margin: 40px 142px 90px 0;
 }
 
 .button2 {
   font-family: Inika;
   font-size: 20px;
   font-weight: 400;
+  /* font-stretch:normal; */
 
   color: #e06733;
   border: 1px solid #e06733;
@@ -232,37 +262,30 @@ h2 {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  background-color:inherit;
-  /* display: inline-block; */
+  background-color: inherit;
+  margin: 69px 38px 0 0;
+  display: block;
 }
 
-.button3 {
-  font-family: Inika;
-  font-size: 20px;
-  font-weight: 700;
-
-  color: #e06733;
-  border: 1px solid #e06733;
-  border-radius: 10px;
-  padding: 12px 34px 12px 30px;
-  text-align: center;
-  text-decoration: none;
-  /* margin-top:38px; */
-  margin-bottom:38px;
-  cursor: pointer;
-  background-color:inherit;
-  /* display: inline-block; */
-}
-
-:where(.button, .button2, .button3):hover {
+.button2:hover {
   background-color: #e06733;
   color: white;
 }
 
-
-.service > .wrapper {
-  height: 1300px;
+.cards_block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 450px 450px;
+  column-gap: 116px;
+  row-gap: 55px;
 }
+
+.card {
+border: solid 1px orangered;
+}
+
+/* Section #3 Service end */
+/* Section #4 Prices start */
 
 .prices > .wrapper {
   display: flex;
@@ -272,51 +295,28 @@ h2 {
   height: 560px;
 }
 
+.prices h2,
+.prices p {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: black;
+}
+
+.prices p {
+  text-align: right;
+}
+
 .prices_more {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width:452px;
-
+  width: 452px;
 }
-
 
 .prices-pic {
   width: 152px;
-}
-.contacts > .wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-/*   background-image: url("./assets/img/contact_woman.png");
-  background-repeat: no-repeat; */
-  height: 550px;
-}
-
-.contacts-pic {
-align-self:flex-end;
-/* display: block; */
-}
-
-.accordion {
-  width: 450px;
-  height: 50px;
-  margin-top: 148px;
-
-  background: #D6E7D2;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0px;
-  display: flex;
-  padding-left: 20px;
-  padding-right: 35px;
-  align-items: center;
-  justify-content: space-between;
-  
-
-}
-.accordion > p {
-color: #717171;
 }
 
 .prices_plans {
@@ -325,8 +325,7 @@ color: #717171;
   height: 282px;
   margin-top: 60px;
 
-  
-  border: 1px solid #E3E1D5;
+  border: 1px solid #e3e1d5;
   border-radius: 20px;
   padding: 34px 41px;
   display: flex;
@@ -334,58 +333,112 @@ color: #717171;
   justify-content: space-between;
 }
 .price_items {
+  width: 250px;
+  height: 50px;
 
-width: 250px;
-height: 50px;
-
-background: #EDF2EC;
-border-radius: 20px;
+  background: #edf2ec;
+  border-radius: 20px;
 }
 
-/* Main end */
+/* Section #4 Prices end */
+/* Section #5 Contacts start */
 
+.contacts > .wrapper {
+  position: relative;
+  height: 550px;
+}
+
+.contacts-pic {
+  position:absolute;
+  bottom:0;
+}
+
+.contacts h2 {
+  font-family: "Inika";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.accordion {
+  position:absolute;
+  top: 148px;
+  right: 109px;
+  width: 450px;
+  height: 50px;
+
+  background: #d6e7d2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 35px;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion > p {
+  color: #717171;
+}
+
+/* Section #5 Contacts end */
+/* Main end */
 
 /* Foooter start */
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-
   height: 130px;
   background-color: white;
   color: black;
 }
 
+.footer-container a {
+  text-decoration: none;
+  color: black;
+}
+
 .copyright {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .copyright > p,
-a {
+.copyright > a {
   margin-right: 20px;
 }
-.footer-container a {
-  text-decoration: none;
-  color:black
+
+.rs-link {
+  display: flex;
 }
-.social > img {
-  margin-right: 20px;
-}
-.social > img:last-child {
-  margin-right: 0;
+
+.rs-link > a {
+  margin: 0 auto;
 }
 
 .social-list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-end;
   list-style: none;
 }
 
-.rs-link {
-
+.social-list li {
+  margin-right: 20px;
 }
+
+.social-list li:last-child {
+  margin-right: 0;
+}
+
+
+/* .social {
+}
+
+.social ul {
+} */
+
+
 /* Foooter end */
