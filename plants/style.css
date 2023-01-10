@@ -72,7 +72,6 @@ h2 {
   color: black;
   border: 2px solid #e06733;
   border-radius: 10px;
-  /* padding: 14px 27px; */
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -81,7 +80,6 @@ h2 {
   background-color: inherit;
   width: 158px;
   height: 44px;
-
   transition: all 0.5s;
 }
 
@@ -89,19 +87,17 @@ h2 {
   font-family: Inika;
   font-size: 20px;
   font-weight: 400;
-  /* font-stretch:normal; */
-
   color: #e06733;
   border: 1px solid #e06733;
   border-radius: 5px;
-  /* padding: 12px 54px; */
   width: 161px;
   height: 50px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   background-color: inherit;
-  margin: 69px 38px 0 0;
+  margin-right: 38px;
+  margin-bottom: 15px;
   display: block;
   transition: all 0.5s;
 }
@@ -110,11 +106,9 @@ h2 {
   font-family: Inika;
   font-size: 20px;
   font-weight: 700;
-
   color: #e06733;
   border: 1px solid #e06733;
   border-radius: 5px;
-  /* padding: 12px 34px 12px 30px; */
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -123,7 +117,6 @@ h2 {
   height: 50px;
   transition: all 0.5s;
   margin-left: auto;
-  /* display: inline-block; */
 }
 
 :where(.button, .button2, .button3):hover {
@@ -230,10 +223,6 @@ h2 {
   /* background-image: url("./assets/img/leafs.png"); */
 }
 
-/* .welcome-block {
-  width: 548px;
-} */
-
 .welcome h1 {
   margin-top: 5px;;
   width: 548px;
@@ -261,11 +250,6 @@ h2 {
   height: 666px;
 }
 
-/* .about-block {
-  margin: top 10px;
-  width: 605px;
-} */
-
 .about h2 {
   margin-top: 26px;
 
@@ -287,49 +271,46 @@ h2 {
 /* Section #3 Service start */
 
 .service > .wrapper {
-  height: 1300px;
+  /* height: 1300px; */
+  
+  padding-bottom: 120px;
 }
 
 .service_filters_block {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-end;
   align-content: center;
+  margin-bottom: 90px;
 }
 
 .service h2 {
   width: 306px;
   margin-top: 40px;
   margin-right: 142px;
-  margin-bottom: 80px;
+  margin-bottom: 0;
 }
 
 .cards_grid {
   display: grid;
   grid-template-columns: repeat(3, 330px);
-  grid-template-rows: repeat(2, 450px);
+  /* grid-template-rows: repeat(2, 450px); */
   grid-auto-rows: 450px;
-  grid-auto-flow: row;
+  /* grid-auto-flow: row; */
+  /* justify-items: center; */
   gap: 55px 116px;
+  /* margin-top: 90px; */
+  /* margin: 0 auto; */
 }
 
 .card {
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center bottom 100px;
+  border-radius: 20px 20px 0px 0px;
   margin: 0;
 }
-
-.card {
-  /* background-image: url("./assets/img/card1.png"); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px 20px 0px 0px;
-  margin-bottom: 100px;
-}
-/* .card-pic {
-  margin:auto;
-  background-image: url("./assets/img/card1.png");
-} */
 
 .card:nth-child(1) {
   background-image: url("./assets/img/card1.png")
@@ -350,17 +331,13 @@ h2 {
   background-image: url("./assets/img/card6.png")
 }
 
-
 .card > figcaption {
   margin-top: 350px;
+  padding: 0 20px;
   height: 100px;
   border: 1px solid #e3e1d5;
   border-radius: 0px 0px 20px 20px;
 }
-
-/* .card-pic {
-  display: block;
-} */
 
 .card_category {
   font-family: "Inter";
@@ -370,8 +347,7 @@ h2 {
   line-height: 20px;
   text-align: center;
   color: #e06733;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 .card_text {
@@ -382,11 +358,8 @@ h2 {
   line-height: 20px;
   text-align: center;
   color: #717171;
+  margin: 0px;
 }
-
-/* .card2 {
-border: solid 1px orangered;
-} */
 
 /* Section #3 Service end */
 /* Section #4 Prices start */
@@ -421,12 +394,6 @@ border: solid 1px orangered;
   width: 452px;
 }
 
-/* .prices_more {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 452px;
-}
  */
 .prices-pic {
   display: block;
@@ -474,19 +441,27 @@ border: solid 1px orangered;
 }
 
 
-
 /* Section #4 Prices end */
 /* Section #5 Contacts start */
 
 .contacts > .wrapper {
-  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: 450px auto 450px;
+  grid-auto-flow: column dense;
+  background-image: url("./assets/img/contact_woman.png");
+  background-repeat: no-repeat;
+  /* background-size: ; */
+  background-position: bottom left 109px;
+
   height: 550px;
 }
 
-.contacts-pic {
+/* .contacts-pic {
   position: absolute;
   bottom: 0;
-}
+} */
 
 .contacts h2 {
   font-family: "Inika";
@@ -496,12 +471,11 @@ border: solid 1px orangered;
   padding-top: 60px;
   text-align: center;
   margin: 0;
+  grid-column: 2;
 }
 
 .accordion {
-  position: absolute;
-  top: 148px;
-  right: 109px;
+  margin-top: 148px;
   width: 450px;
   height: 50px;
 
@@ -514,6 +488,8 @@ border: solid 1px orangered;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  
+  grid-column: 3;
 }
 .accordion > p {
   color: #717171;
@@ -528,6 +504,7 @@ border: solid 1px orangered;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  justify-items: center;
   height: 130px;
   background-color: white;
   color: black;
@@ -537,7 +514,12 @@ border: solid 1px orangered;
   text-decoration: none;
   color: black;
 }
-
+.footer-container > div,.footer-container > ul {
+  height:32px;
+}
+.copyright > p {
+  margin: 0;
+}
 .copyright {
   display: flex;
   align-items: center;
@@ -566,6 +548,7 @@ border: solid 1px orangered;
   align-items: center; */
   list-style: none;
   padding: 0;
+  margin:0;
 }
 
 .social-list li {
@@ -585,7 +568,7 @@ border: solid 1px orangered;
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .wrapper {
-    max-width: 768px;
+    width: 768px;
     margin: 0 auto;
     padding: 0 50px;
     flex-direction: column;
@@ -607,108 +590,304 @@ border: solid 1px orangered;
   .header-container {
     height: 117px;
   }
-  .footer-container {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    height: 181px;
-  }
-  .welcome-pic {
-    order: 4;
-    width: 280px;
-  }
-  .about-pic {
-    width: 250px;
-  }
-  .welcome h1 {
-    font-size: 35px;
-    width: 341px;
-  }
-  .welcome p {
-    font-size: 16px;
-    line-height: 25px;
-    width: 341px;
-  }
-
-  .about h2 {
-    font-size: 35px;
-    line-height: 45px;
-    width: 341px;
-    text-align: center;
-    width: 423px;
-  }
-  .about p {
-    width: 100%;
-  }
-  .contacts-pic {
-
-  }
-/*   .copyright {
-    justify-items: center;
-  }
-  .social-list {
-    justify-items: center;
-  } */
-
   .welcome > .wrapper {
     height: 420px;
+    justify-content: flex-start;
   }
   .about > .wrapper {
+    justify-content: flex-start;
     align-items: center;
+    
     height: 783px;
   }
   .service > .wrapper {
-    height: 1780px;
+    /* height: 1780px; */
     padding-bottom: 70px;
   }
   .prices > .wrapper {
     height: 585px;
   }
   .contacts > .wrapper {
+    display: flex;
+    align-items: center;
+    grid-template-columns: 1fr;
+    background-position: 294px bottom;
+    background-size: 200px;
     height: 739px;
   }
+  .footer-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 181px;
+  }
+
+  h1 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  h2 {
+    font-size: 35px;
+    line-height: 46px;
+  }
+  
+  .welcome h1 {
+    margin-top: 40px;
+    width: 341px;
+  }
+
+  .welcome p {
+    font-size: 16px;
+    line-height: 25px;
+    width: 341px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding-left: 5px;
+  }
+  .welcome-pic {
+    margin-top: 40px;
+    order: 4;
+    width: 280px;
+  }
+  .about h2 {
+    font-size: 35px;
+    line-height: 46px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .about p {
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+    margin-top: 48px;
+  }
+  .about-pic {
+    margin-top: 50px;
+    width: 250px;
+  }
+  .service h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  .service_filters_block {
+    margin-bottom: 30px;
+  }
+  .prices h2 {
+    font-size: 35px;
+    line-height: 42px;
+    margin-left: 15px;
+    margin-top: 40px;
+  }
+  .prices_plans {
+    margin-top: 58px;
+  }
+  .prices_subheader {
+    font-size: 25px;
+    line-height: 35px;
+    width: 296px;
+    margin-top: 140px;
+    margin-bottom: 28px;
+    text-align: right;
+  }
+
+  .prices-pic {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: -10px;
+  }
+  .contacts h2 {
+    font-size: 40px;
+    padding-top: 40px;
+  }
+  .accordion {
+    margin-top: 100px;
+  }
+
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 380px) and (max-width: 767px) {
   .wrapper {
-    max-width: 100%;
-    padding: 0 50px;
+    width: 380px;
+    padding: 0 25px;
     flex-direction: column;
+    align-items:center;
     flex-wrap: nowrap;
   }
   .cards_grid {
-    grid-template-columns: 280px;
-    gap: 34px 34px;
+    grid-template-columns: auto 280px auto;
+    gap: 34px 0;
+  }
+  .card {
+    grid-column: 2;
   }
   .header-container {
     height: 96px;
+  }
+  .welcome > .wrapper {
+    flex-direction: column;
+    height: 300px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .about > .wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 516px;
+  }
+  .service > .wrapper {
+    padding-bottom: 27px;
+    /* height: 3150px; */
+  }
+  .prices > .wrapper {
+    height: 512px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items:center;
+  }
+  .contacts > .wrapper {
+    display: flex;
+    align-items: center;
+    grid-template-columns: 1fr;
+    background-position: bottom center;
+    background-size: 100px;
+    height: 445px;
   }
   .footer-container {
     grid-template-columns: 1fr;
     justify-items: center;
     height: 146px;
   }
+  h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  h2 {
+    font-size: 25px;
+    line-height: 33px;
+  }
+  .prices h2, .contacts h2 {
+    font-size: 25px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .welcome h1 {
+    width: 330px;
+    margin-top: 25px;
+  }
+  .welcome p {
+    font-size: 16px;
+    line-height: 25px;
+    width: 100%;
+    
+    margin-top: 21px;
+    margin-bottom: 25px;
+  }
   .welcome-pic {
     display: none;
+  }
+  .about h2 {
+    line-height: 33px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .about p {
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 14px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .about-pic {
+    margin-bottom: 35px;
+    width: 150px;
+  }
+  .service h2 {
+    margin-top: 30px;
+    margin-bottom: 38px;
+    width: 100%;
+    line-height: 33px;
+
+  }
+  .service_filters_block {
+    margin-bottom: 32px;
+  }
+  .button {
+    font-size: 10px;
+    width: 100px;
+    height: 35px;
+    margin-bottom: auto;
+  }
+  .button2 {
+    font-size: 15px;
+    width: 121px;
+    height: 35px;
+    margin: 0 9px 9px 0;
+  }
+  .button3 {
+    font-size: 15px;
+    width: 121px;
+    height: 35px;
+    margin-left: unset;
+    margin-bottom: 40px;
   }
   .prices-pic {
     display: none;
   }
-  
-  .about > .wrapper {
-    height: 300px;
+  .prices h2 {
+    margin-top: 25px;
+    line-height: 30px;
   }
-  .welcome > .wrapper {
-    height: 516px;
+  .prices_plans {
+    margin-top: 38px;
+    margin-bottom: 0;
+    width: 224px;
+    height: 235px;
+    padding: 29px 22px;
   }
-  .service > .wrapper {
-    height: 3150px;
+  .price_item {
+    width: 180px;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 40px;
+    margin: 0 0 13.92px 0;
   }
-  .prices > .wrapper {
-    height: 512px;
+
+  .price_item > p {
+      font-size: 15px;
+      margin: 0;
   }
-  .contacts > .wrapper {
-    height: 445px;
+  .prices_subheader {
+    font-size: 20px;
+    line-height: 35px;
+    width: 230px;
+    text-align: center;
+    margin-top: 19px;
+    margin-bottom: 20px;
+  }
+  .contacts h2 {
+    font-size: 25px;
+    padding-top: 25px;
+    line-height: 33px;
+    /* text-align: center; */
+  }
+  .accordion {
+    margin-top: 80px;
+    width: 300px;
+    padding-right: 20px;
   }
 }
-
+@media screen and (min-width: 320px) and (max-width: 379px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 15px;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: nowrap;
+  }
+}
 /* Media end */
