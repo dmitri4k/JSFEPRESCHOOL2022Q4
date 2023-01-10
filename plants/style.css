@@ -122,6 +122,7 @@ h2 {
   width: 162px;
   height: 50px;
   transition: all 0.5s;
+  margin-left: auto;
   /* display: inline-block; */
 }
 
@@ -132,9 +133,9 @@ h2 {
 
 /* Header start */
 
-.header_wrapper {
+.header-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-between;
   height: 134px;
@@ -143,7 +144,7 @@ h2 {
 
 .header_logo {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .header_logo-link {
@@ -169,13 +170,13 @@ h2 {
 .nav-link {
   position: relative;
   text-decoration: none;
-  font-family: 'Inika';
+  font-family: "Inika";
   color: #010201;
   font-size: 16px;
   padding: 0 10px;
 }
 
-.nav-link:after {
+.nav-link::after {
   content: "";
   position: absolute;
   background-color: #e06733;
@@ -191,10 +192,9 @@ h2 {
   font-weight: 700;
 }
 
-.nav-link:hover:after {
+.nav-link:hover::after {
   width: 100%;
 }
-
 
 /* Header end */
 
@@ -215,27 +215,36 @@ h2 {
 
 .welcome > .wrapper {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
   flex-wrap: wrap;
-  min-height: 532px;
+  height: 532px;
 }
 
 .welcome-pic {
+  display: block;
   width: 450px;
+  margin: 20px 0 20px 0;
   /* background-image: url("./assets/img/leafs.png"); */
 }
 
-.welcome-block {
+/* .welcome-block {
+  width: 548px;
+} */
+
+.welcome h1 {
+  margin-top: 5px;;
   width: 548px;
 }
 
-.welcome-block > p {
-  margin-top: 42px;
+.welcome p {
+  margin-top: 45px;
   margin-bottom: 48px;
   display: block;
   line-height: 35px;
+  width: 548px;
 }
 
 /* Section #1 Welcome end */
@@ -244,28 +253,32 @@ h2 {
 
 .about > .wrapper {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: space-between;
   height: 666px;
 }
 
-.about-block {
+/* .about-block {
   margin: top 10px;
+  width: 605px;
+} */
+
+.about h2 {
+  margin-top: 26px;
+
+}
+
+.about p {
+  margin-top: 40px;
+  line-height: 30px;
   width: 605px;
 }
 
-.about-block > h2 {
-  margin-top: 26px;
-  width: 463px;
-}
-
-.about-block > p {
-  margin-top: 40px;
-  line-height: 30px;
-}
-
 .about-pic {
+  display: block;
   width: 464px;
 }
 
@@ -276,7 +289,8 @@ h2 {
 .service > .wrapper {
   height: 1300px;
 }
-.service_block {
+
+.service_filters_block {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -291,31 +305,62 @@ h2 {
   margin-bottom: 80px;
 }
 
-.cards_block {
+.cards_grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 450px 450px;
-  column-gap: 116px;
-  row-gap: 55px;
+  grid-template-columns: repeat(3, 330px);
+  grid-template-rows: repeat(2, 450px);
+  grid-auto-rows: 450px;
+  grid-auto-flow: row;
+  gap: 55px 116px;
 }
 
 .card {
-  /* width:330px; */
-  /* border: 1px solid #E3E1D5;
-  border-radius: 20px; */
   margin: 0;
 }
 
+.card {
+  /* background-image: url("./assets/img/card1.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 100px;
+}
+/* .card-pic {
+  margin:auto;
+  background-image: url("./assets/img/card1.png");
+} */
+
+.card:nth-child(1) {
+  background-image: url("./assets/img/card1.png")
+}
+.card:nth-child(2) {
+  background-image: url("./assets/img/card2.png")
+}
+.card:nth-child(3) {
+  background-image: url("./assets/img/card3.png")
+}
+.card:nth-child(4) {
+  background-image: url("./assets/img/card4.png")
+}
+.card:nth-child(5) {
+  background-image: url("./assets/img/card5.png")
+}
+.card:nth-child(6) {
+  background-image: url("./assets/img/card6.png")
+}
+
+
 .card > figcaption {
-  margin-top: 0;
+  margin-top: 350px;
   height: 100px;
   border: 1px solid #e3e1d5;
   border-radius: 0px 0px 20px 20px;
 }
 
-.card-pic {
+/* .card-pic {
   display: block;
-}
+} */
 
 .card_category {
   font-family: "Inter";
@@ -348,9 +393,11 @@ border: solid 1px orangered;
 
 .prices > .wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: flex-start;
   height: 560px;
 }
 
@@ -363,7 +410,7 @@ border: solid 1px orangered;
   margin-top: 38px;
 }
 
-.prices p {
+.prices_subheader {
   font-family: "Inter";
   font-weight: 700;
   font-size: 40px;
@@ -371,20 +418,22 @@ border: solid 1px orangered;
   margin-top: 38px;
   color: black;
   text-align: right;
+  width: 452px;
 }
 
-.prices_more {
+/* .prices_more {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: 452px;
 }
-
+ */
 .prices-pic {
   display: block;
   width: 168px;
   margin-top: 35px;
   margin-right: -10px;
+  margin-left: auto;
 }
 
 .prices_plans {
@@ -406,9 +455,10 @@ border: solid 1px orangered;
   background: #edf2ec;
   border-radius: 20px;
 
-  display: flex;
   padding-left: 40px;
   padding-right: 40px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
@@ -421,8 +471,9 @@ border: solid 1px orangered;
   font-size: 20px;
   line-height: 20px;
   color: #000000;
-  margin: 0;
 }
+
+
 
 /* Section #4 Prices end */
 /* Section #5 Contacts start */
@@ -497,6 +548,9 @@ border: solid 1px orangered;
   margin-right: 20px;
 }
 
+.copyright a:last-child {
+  margin-right: 0;
+}
 .rs-link {
   display: flex;
 }
@@ -511,14 +565,150 @@ border: solid 1px orangered;
   /*   align-content: center;
   align-items: center; */
   list-style: none;
+  padding: 0;
 }
 
 .social-list li {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.social-list li:last-child {
-  margin-right: 0;
+.social-list li:first-child {
+  margin-left: 0;
 }
 
 /* Foooter end */
+
+/* Media start */
+
+/* @media screen and (min-width: 1440px) {
+} */
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: initial;
+  }
+  .cards_grid {
+    grid-template-columns: 280px 280px;
+    gap: 38px 106px;
+  }
+
+/*   .service > .wrapper {
+    height: unset;
+  }
+  .header-container, .footer-container {
+    height: unset;
+  } */
+
+  .header-container {
+    height: 117px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 181px;
+  }
+  .welcome-pic {
+    order: 4;
+    width: 280px;
+  }
+  .about-pic {
+    width: 250px;
+  }
+  .welcome h1 {
+    font-size: 35px;
+    width: 341px;
+  }
+  .welcome p {
+    font-size: 16px;
+    line-height: 25px;
+    width: 341px;
+  }
+
+  .about h2 {
+    font-size: 35px;
+    line-height: 45px;
+    width: 341px;
+    text-align: center;
+    width: 423px;
+  }
+  .about p {
+    width: 100%;
+  }
+  .contacts-pic {
+
+  }
+/*   .copyright {
+    justify-items: center;
+  }
+  .social-list {
+    justify-items: center;
+  } */
+
+  .welcome > .wrapper {
+    height: 420px;
+  }
+  .about > .wrapper {
+    align-items: center;
+    height: 783px;
+  }
+  .service > .wrapper {
+    height: 1780px;
+    padding-bottom: 70px;
+  }
+  .prices > .wrapper {
+    height: 585px;
+  }
+  .contacts > .wrapper {
+    height: 739px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 50px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .cards_grid {
+    grid-template-columns: 280px;
+    gap: 34px 34px;
+  }
+  .header-container {
+    height: 96px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    height: 146px;
+  }
+  .welcome-pic {
+    display: none;
+  }
+  .prices-pic {
+    display: none;
+  }
+  
+  .about > .wrapper {
+    height: 300px;
+  }
+  .welcome > .wrapper {
+    height: 516px;
+  }
+  .service > .wrapper {
+    height: 3150px;
+  }
+  .prices > .wrapper {
+    height: 512px;
+  }
+  .contacts > .wrapper {
+    height: 445px;
+  }
+}
+
+/* Media end */
