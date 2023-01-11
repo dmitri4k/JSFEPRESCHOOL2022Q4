@@ -338,32 +338,36 @@ h2 {
 
 .card {
   background-repeat: no-repeat;
-  /* background-size: cover; */
-  background-position: center bottom 100px;
-  border-radius: 20px 20px 0px 0px;
+  background-size: cover;
+  background-position: center bottom;
+  /* background-clip: content-box; */
+  border-radius: 20px 20px 22px 22px;
   margin: 0;
 }
 
 .card:nth-child(1) {
-  background-image: url("./assets/img/card1.png")
+  background-image: url("./assets/img/card-full-1.jpg")
 }
 .card:nth-child(2) {
-  background-image: url("./assets/img/card2.png")
+  background-image: url("./assets/img/card-full-2.jpg")
 }
 .card:nth-child(3) {
-  background-image: url("./assets/img/card3.png")
+  background-image: url("./assets/img/card-full-3.jpg")
 }
 .card:nth-child(4) {
-  background-image: url("./assets/img/card4.png")
+  background-image: url("./assets/img/card-full-4.jpg")
 }
 .card:nth-child(5) {
-  background-image: url("./assets/img/card5.png")
+  background-image: url("./assets/img/card-full-5.jpg")
 }
 .card:nth-child(6) {
-  background-image: url("./assets/img/card6.png")
+  background-image: url("./assets/img/card-full-6.jpg")
 }
 
 .card > figcaption {
+  background-color: #EDF2EC;
+/*   z-index: 1000;
+  background-clip: border-box; */
   margin-top: 350px;
   padding: 0 20px;
   height: 100px;
@@ -753,7 +757,6 @@ h2 {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-
   .nav_burger {
     display: block;
   }
