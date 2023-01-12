@@ -345,7 +345,7 @@ h2 {
   margin: 0;
 }
 
-.card:nth-child(1) {
+/* .card:nth-child(1) {
   background-image: url("./assets/img/card-full-1.jpg")
 }
 .card:nth-child(2) {
@@ -362,7 +362,7 @@ h2 {
 }
 .card:nth-child(6) {
   background-image: url("./assets/img/card-full-6.jpg")
-}
+} */
 
 .card > figcaption {
   background-color: #EDF2EC;
@@ -549,6 +549,10 @@ h2 {
 .footer-container a {
   text-decoration: none;
   color: black;
+  transition: all 0.1s;
+}
+.footer-container a:hover {
+  color:#e06733;
 }
 .footer-container > div,.footer-container > ul {
   height:32px;
