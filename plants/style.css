@@ -156,6 +156,7 @@ h2 {
   bottom: 0;
 }
 
+
 /* Header start */
 
 .header-container {
@@ -507,27 +508,6 @@ h2 {
   text-align: center;
   margin: 0;
   grid-column: 2;
-}
-
-.accordion {
-  margin-top: 148px;
-  width: 450px;
-  height: 50px;
-
-  background: #d6e7d2;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0px;
-  display: flex;
-  padding-left: 20px;
-  padding-right: 35px;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  
-  grid-column: 3;
-}
-.accordion > p {
-  color: #717171;
 }
 
 /* Section #5 Contacts end */

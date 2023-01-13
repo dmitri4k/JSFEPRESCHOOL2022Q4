@@ -1,0 +1,186 @@
+.adressCard {
+  display: none;
+  grid-template-columns: 33px 132px auto;
+  grid-template-rows: 42 px 35px;
+  width: 448px;
+  height: 214px;
+  background: #edf2ec;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  margin-top: 47px;
+  grid-column: 3;
+  padding-top: 10px;
+}
+
+.adress-button {
+  display: flex;
+  width: 122px;
+  height: 26px;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+  color: #717171;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  background-color: inherit;
+  transition: all 0.5s;
+  grid-column: 1 / span 23;
+  margin: 0 auto;
+}
+
+.adress-key {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+
+  /* or 250% */
+  letter-spacing: 0.05em;
+  color: #000000;
+  grid-column: 2;
+}
+.adress-value {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+
+  /* identical to box height, or 250% */
+  letter-spacing: 0.05em;
+  color: #717171;
+  grid-column: 3;
+}
+.adressCard.isVisible {
+  display: grid;
+}
+/* .selectCustom.isSelected > */
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .adressCard {
+    width: 282px;
+    height: 212px;
+  }
+  .selectWrapper {
+    margin-top: 80px;
+  }
+  .selectCustom.isSelected > .selectWrapper {
+    margin-top: 42px;
+  }
+  .adressCard {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1390px) {
+  .selectWrapper {
+    margin-top: 100px;
+  }
+  .selectCustom.isSelected > .selectWrapper {
+    margin-top: 60px;
+  }
+  .adressCard {
+    margin-top: 60px;
+  }
+}
+
+.selectWrapper {
+  margin-top: 148px;
+  position: relative;
+  grid-column: 3;
+}
+
+.selectCustom {
+  position: relative;
+  width: 450px;
+  height: 50px;
+}
+
+.selectCustom-trigger {
+  display: flex;
+  justify-content: space-between;
+  background: #d6e7d2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  color: #717171;
+  font-size: 20px;
+  line-height: 2.5;
+  letter-spacing: 0.05em;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 35px;
+  /*   padding-bottom: auto;
+  padding-top: auto; */
+  cursor: pointer;
+  transform: all 0.8s;
+}
+
+.selectCustom-arrow {
+  width: 16px;
+  transform: all 0.8s;
+}
+
+.selectCustom.isActive
+.selectCustom-trigger {
+  background: #c1e698;
+  box-shadow: none;
+}
+.selectCustom.isActive,
+.selectCustom-trigger:hover {
+  background: #c1e698;
+  box-shadow: none;
+}
+
+.selectCustom.isSelected,
+.selectCustom.isSelected > .selectCustom-trigger {
+  background: #C1E698;
+  box-shadow: none;
+}
+.selectCustom.isActive
+.selectCustom-arrow {
+  transform: scaleY(-1);
+}
+
+
+.selectCustom-options {
+  position: absolute;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  color: #499a18;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #dce9d9;
+  z-index: 1;
+  display: none;
+  padding: 15px 50px 30px 20px;
+}
+
+.selectCustom.isActive .selectCustom-options {
+  display: block;
+}
+
+.selectCustom-option {
+  position: relative;
+  height: 47px;
+  border-bottom: 1px solid #d9d9d9;
+  padding-left: 6px;
+  padding-bottom: 0;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.selectCustom-option:hover {
+  border-color: #717171;
+  color: #717171;
+}

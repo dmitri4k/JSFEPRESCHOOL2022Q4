@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plants</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./select.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -175,9 +176,21 @@
       <section class="contacts" id="contacts">
         <div class="wrapper">
           <h2>Contact us</h2>
-          <div class="accordion">
-            <p>City</p>
-            <img src="./assets/svg/accordion_btn.svg" alt="accordion_btn" />
+          <div class="selectWrapper">
+            <div class="selectCustom js-selectCustom">
+              <div class="selectCustom-trigger">City <img src="./assets/svg/accordion_btn.svg" class="selectCustom-arrow"/></div>
+              <div class="selectCustom-options">
+                <div class="selectCustom-option" data-value="ca">Canandaigua, NY</div>
+                <div class="selectCustom-option" data-value="ny">New York City</div>
+                <div class="selectCustom-option" data-value="yo">Yonkers, NY</div>
+                <div class="selectCustom-option" data-value="sh">Sherrill, NY</div>
+              </div>
+          </div>
+          <div class="adressCard">
+            <div class="adress-key adress-city">City:</div><div class="adress-value" data="city" id="city"></div>
+            <div class="adress-key adress-phone">Phone:</div><div class="adress-value" data="phone" id="phone"></div>
+            <div class="adress-key adress-office_adress">Office adress:</div><div class="adress-value" data="adress" id="adress"></div>
+            <button class="adress-button">Call us</button>
           </div>
         </div>
       </section>
