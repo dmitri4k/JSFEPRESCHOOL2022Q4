@@ -1,0 +1,189 @@
+.pricePlans {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 332px;
+  height: 282px;
+  margin-top: 60px;
+  font-family: "Inter";
+  font-style: normal;
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+  padding: 34px 41px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.priceTrigger {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 50px;
+  background: #edf2ec;
+  border-radius: 20px;
+  cursor: pointer;
+
+  padding: 0 40px;
+}
+
+.pricePlan {
+  display: none;
+  position: absolute;
+  flex-direction: row;
+  justify-content: flex-end;
+  top: -154px;
+  left: 0;
+  z-index: 2;
+
+  width: 250px;
+  height: 154px;
+  background: #d6e7d2;
+  border-radius: 20px;
+
+  padding: 16px 46px 12px 40px;
+  transition: top 0.8s;
+}
+
+.pricePlan.isSelected {
+  top: 0px;
+  display: flex;
+  /* transform: translateY(100%); */
+}
+.pricePlanHeader {
+  z-index: 3;
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+
+}
+.pricePlanContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+  margin-top:35px;
+  border-top: 0.5px solid #aea1a1;
+}
+
+.pricePlanText{
+  font-size: 10px;
+  line-height: 10px;
+  color: #717171;
+  font-weight: 300;
+  z-index: 2;
+  margin: 0;
+}
+
+.pricePlanPrice {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  color: black;
+  z-index: 2;
+}
+.orange-text-bold {
+  font-weight: 700;
+  color: #E06733;
+}
+.buttonOrder {
+  width: 86px;
+  height: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #717171;
+  background: white;
+  border-width: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.priceTrigger.isSelected {
+  z-index: 5;
+  background: #d6e7d2;
+}
+.selectCustom-arrow3 {
+  z-index: 6;
+  cursor: pointer;
+}
+
+/* Media tablet start */
+@media screen and (min-width: 768px) and (max-width: 1390px) {
+  .pricePlans {
+    margin-top: 58px;
+  }
+}
+
+/* Media phone start */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .pricePlans {
+    margin-top: 38px;
+    margin-bottom: 0;
+    width: 224px;
+    height: 235px;
+    padding: 29px 22px;
+  }
+  .priceTrigger {
+    width: 180px;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 40px;
+    font-size: 15px;
+  }
+  .pricePlan {
+    width: 180px;
+    padding: 16px 38px 12px 30px;
+  }
+
+  .pricePlanHeader {
+    font-size: 15px;
+  }
+}
+
+/* .pricePlans {
+  box-sizing: border-box;
+  width: 332px;
+  height: 282px;
+  margin-top: 60px;
+  
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+  padding: 34px 41px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pricePlan {
+  width: 250px;
+  height: 154px;
+  background: #D6E7D2;
+  border-radius: 20px;
+}
+.priceTrigger {
+  width: 250px;
+  height: 50px;
+  background: #edf2ec;
+  border-radius: 20px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.pricePlanHeader {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000000;
+} */
