@@ -109,9 +109,13 @@
   z-index: 5;
   background: #d6e7d2;
 }
-.selectCustom-arrow3 {
+.price-arrow {
   z-index: 6;
   cursor: pointer;
+}
+.priceTrigger.isSelected .price-arrow {
+  transform: scaleY(-1);
+  fill: #AEA1A1;
 }
 
 /* Media tablet start */

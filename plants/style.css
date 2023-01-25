@@ -33,6 +33,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 109px;
+  z-index: 1;
 }
 
 /* Headers and text styles start */
@@ -324,7 +325,7 @@ h2 {
   background-position: center bottom;
   border-radius: 20px 20px 22px 22px;
   margin: 0;
-  transition: all 0.3s;
+  transition: filter 0.3s;
 }
 .card.isSelected {
   filter: none;
@@ -406,7 +407,7 @@ h2 {
 /* Section #4 Prices end */
 /* Section #5 Contacts start */
 
-.contacts > .wrapper {
+.contacts-wrapper {
   display: grid;
   justify-items: center;
   align-items: start;
@@ -540,7 +541,7 @@ h2 {
   .prices > .wrapper {
     height: 585px;
   }
-  .contacts > .wrapper {
+  .contacts-wrapper {
     display: flex;
     align-items: center;
     background-position: 294px bottom;
@@ -778,7 +779,7 @@ h2 {
   .prices-pic {
     display: none;
   }
-  .contacts > .wrapper {
+  .contacts-wrapper {
     display: flex;
     align-items: center;
     background-position: bottom center;
@@ -877,6 +878,9 @@ h2 {
     font-size: 25px;
     padding-top: 25px;
     line-height: 33px;
+  }
+  .contacts-wrapper.pic-hide {
+    background-image: none;
   }
 }
 /* Media Phone end */
