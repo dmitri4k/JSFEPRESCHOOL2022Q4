@@ -1,0 +1,75 @@
+.buttonService {
+    font-family: Inika;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid #e06733;
+    border-radius: 5px;
+    width: 161px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 38px;
+    margin-bottom: 24px;
+    display: block;
+    transition: all 0.5s;
+  }
+  
+  .buttonService_isActive,
+  .buttonService_notSelected,
+  .buttonService_isSelected:hover {
+    background-color: #EDF2EC;
+    color: #e06733;
+  }
+  
+  .buttonService_isActive:hover,
+  .buttonService_isSelected {
+    background-color: #e06733;
+    color: white;
+    cursor: pointer;
+  }  
+
+.card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: 20px 20px 22px 22px;
+    margin: 0;
+    transition: filter 0.3s;
+  }
+  .card.isSelected {
+    filter: none;
+  }
+  .card.notSelected {
+    filter: blur(2px);
+  }
+  .card > figcaption {
+    background-color: #EDF2EC;
+    margin-top: 350px;
+    padding: 0 20px;
+    height: 100px;
+    border: 1px solid #e3e1d5;
+    border-radius: 0px 0px 20px 20px;
+  }
+  
+  .card_category {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #e06733;
+    margin: 10px 0;
+  }
+  
+  .card_text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #717171;
+    margin: 0px;
+  }
+  

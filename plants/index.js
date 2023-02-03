@@ -17,6 +17,7 @@ Array.from(menuLinks).forEach(function (menuLink) {
   })
 })
 
+
 // Feature#3.3 Address select handler
 let adressJson = `[
     {
@@ -105,15 +106,13 @@ elSelectCustomValue.addEventListener("click", (e) => {
   elSelectCustom.classList.toggle("isActive")
 })
 
-// close the custom select when clicking outside.
+// close the custom select when clicking outside
 document.addEventListener("click", (e) => {
   const didClickedOutside = !elSelectCustom.contains(event.target)
   if (didClickedOutside) {
     elSelectCustom.classList.remove("isActive")
   }
 })
-
-
 
 
 // Feature#3.2 Price plan select handler
@@ -123,11 +122,9 @@ const closeButton = document.getElementsByClassName("price-arrow")
 const orderButton = document.getElementsByClassName("buttonOrder")
 let planId
 
-
 function selectPlan(planId) {
   clearPlans()
   if (planId != undefined) {
-
     document.getElementsByClassName("priceTrigger")[planId].classList.add("isSelected")
     document.getElementsByClassName("pricePlan")[planId].classList.add("isSelected")
   }
@@ -144,6 +141,8 @@ function clearPlans() {
 
 Array.from(priceTrigger).forEach(function (plan) {
   plan.addEventListener("click", (e) => {
+
+    console.log(e.target)
     planId = e.target.getAttribute("plan-id")
     selectPlan(planId)
   })
@@ -156,13 +155,12 @@ Array.from(orderButton).forEach(function (button) {
   button.setAttribute("onclick", 'location.href="#contacts"')
 })
 
-// Feature#3.1 Service Category select handler
 
-let print = () => console.log(categoriesSelected)
+// Feature#3.1 Service Category select handler
+const printCategories = () => console.log(categoriesSelected)
 
 const buttons = document.getElementsByClassName("buttonService")
 const cards = document.getElementsByClassName("card")
-// let categoriesSelected;
 let categoriesSelected = new Set()
 
 function categoryCheck() {
@@ -189,12 +187,6 @@ function cardSet() {
     }
   })
 }
-
-/* function buttonSet2() {
-  for (i; i < 3; i++) {
-    button = buttons[i]
-
-  } */
 
 function buttonSet() {
   Array.from(buttons).forEach(function (button) {
@@ -234,6 +226,6 @@ Array.from(buttons).forEach(function (button) {
   button.addEventListener("click", (e) => {
     let currentCat = e.target.getAttribute("category-id")
     service (currentCat)
-    print()
+    // printCategories()
   })
 })
