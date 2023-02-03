@@ -84,7 +84,7 @@ h2 {
   transition: all 0.5s;
 }
 
-:where(.buttonWelcome, .buttonPrices):hover {
+.buttonWelcome:hover {
   background-color: #e06733;
   color: white;
 }
@@ -761,19 +761,6 @@ h2 {
     width: 100px;
     height: 35px;
     margin-bottom: auto;
-  }
-  .buttonService {
-    font-size: 15px;
-    width: 121px;
-    height: 35px;
-    margin: 0 9px 9px 0;
-  }
-  .buttonPrices {
-    font-size: 15px;
-    width: 121px;
-    height: 35px;
-    margin-left: unset;
-    margin-bottom: 40px;
   }
   .prices h2 {
     margin-top: 25px;

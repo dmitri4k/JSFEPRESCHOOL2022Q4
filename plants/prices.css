@@ -14,6 +14,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.pricePlanWrapper {
+  position: relative;
+}
 
 .priceTrigger {
   position: relative;
@@ -54,13 +57,14 @@
   display: flex;
   /* transform: translateY(100%); */
 }
+
 .pricePlanHeader {
   z-index: 3;
   font-weight: 700;
   font-size: 20px;
   color: black;
-
 }
+
 .pricePlanContent {
   display: flex;
   flex-direction: column;
@@ -135,6 +139,11 @@
   margin-left: auto;
 }
 
+.buttonPrices:hover {
+  background-color: #e06733;
+  color: white;
+}
+
 /* Media tablet start */
 @media screen and (min-width: 768px) and (max-width: 1390px) {
   .pricePlans {
@@ -165,6 +174,14 @@
 
   .pricePlanHeader {
     font-size: 15px;
+  }
+  
+  .buttonPrices {
+    font-size: 15px;
+    width: 121px;
+    height: 35px;
+    margin-left: unset;
+    margin-bottom: 40px;
   }
 }
 
