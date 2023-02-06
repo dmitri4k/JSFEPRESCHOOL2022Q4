@@ -108,7 +108,7 @@ elSelectCustomValue.addEventListener("click", (e) => {
 
 // close the custom select when clicking outside
 document.addEventListener("click", (e) => {
-  const didClickedOutside = !elSelectCustom.contains(event.target)
+  const didClickedOutside = !elSelectCustom.contains(e.target)
   if (didClickedOutside) {
     elSelectCustom.classList.remove("isActive")
   }
@@ -123,14 +123,14 @@ const orderButton = document.getElementsByClassName("buttonOrder")
 let planId
 
 function selectPlan(planId) {
-  clearPlans()
+  clearSelected()
   if (planId != undefined) {
     document.getElementsByClassName("priceTrigger")[planId].classList.add("isSelected")
     document.getElementsByClassName("pricePlan")[planId].classList.add("isSelected")
   }
 }
 
-function clearPlans() {
+function clearSelected() {
   Array.from(priceTrigger).forEach(function (element) {
     element.classList.remove("isSelected")
   })
@@ -139,16 +139,20 @@ function clearPlans() {
   })
 }
 
-Array.from(priceTrigger).forEach(function (plan) {
-  plan.addEventListener("click", (e) => {
-    planId = e.target.getAttribute("plan-id")
-    selectPlan(planId)
+Array.from(closeButton).forEach(function (button) {
+  button.addEventListener("click", (e) => {
+    if (planId == undefined) {
+      console.log(e.target.parentElement)
+      planId = e.target.parentElement.getAttribute("plan-id")
+      selectPlan(planId)
+    } else {
+      planId = undefined
+      clearSelected()
+    }
   })
 })
 
-Array.from(closeButton).forEach(function (button) {
-  button.setAttribute("onclick", "clearPlans()")
-})
+
 Array.from(orderButton).forEach(function (button) {
   button.setAttribute("onclick", 'location.href="#contacts"')
 })
